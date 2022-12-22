@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.884730209038-dsdpm505pr9jnsjc354443euj8hlsq16</string>
+			</array>
+		</dict>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Poppins-Thin.ttf</string>
+		<string>Poppins-Light.ttf</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-Italic.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-SemiBold.ttf</string>
+		<string>Poppins-Bold.ttf</string>
+		<string>Poppins-ExtraBold.ttf</string>
+		<string>Poppins-Black.ttf</string>
+		<string>LeagueSpartan-Thin.ttf</string>
+		<string>LeagueSpartan-Light.ttf</string>
+		<string>LeagueSpartan-Regular.ttf</string>
+		<string>LeagueSpartan-Medium.ttf</string>
+		<string>LeagueSpartan-SemiBold.ttf</string>
+		<string>LeagueSpartan-Bold.ttf</string>
+		<string>LeagueSpartan-ExtraBold.ttf</string>
+		<string>LeagueSpartan-Black.ttf</string>
+	</array>
+</dict>
+</plist>
