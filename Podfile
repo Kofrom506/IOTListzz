@@ -20,7 +20,8 @@ pod 'FirebaseAnalytics'
 pod 'Firebase'
 pod 'FirebaseDatabase'
 pod 'FirebaseDatabaseSwift'
-
+pod 'lottie-ios'
+pod 'SwiftChart'
 
 
 end

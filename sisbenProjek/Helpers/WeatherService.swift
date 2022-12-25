@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-http://api.weatherapi.com/v1/forecast.json?key=157643005b8b4bebadd180824221612&q=Jakarta&days=1&aqi=no&alerts=no
+// http://api.weatherapi.com/v1/forecast.json?key=157643005b8b4bebadd180824221612&q=Jakarta&days=1&aqi=no&alerts=no
 
 public final class WeatherService: NSObject{
     private let locationManager = CLLocationManager()

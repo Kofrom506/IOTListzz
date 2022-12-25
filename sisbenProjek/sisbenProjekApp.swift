@@ -26,32 +26,52 @@ struct sisbenProjekApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginPageView()
+            LoginPageNewView()
         }
     }
 }
 struct mainView: View{
     @State private var selectedTab: Tab = .homeViewPage
     var body: some View{
-        ZStack{
-            switch(self.selectedTab.page){
-            case 1:
-                HomePageView()
-            case 2:
-                ScanPageView()
-            case 3:
-                StudentListView()
-            case 4:
-                ProfileView()
-            default:
-                StudentListView()
-            }
-
-            VStack{
-                Spacer()
-                TabViewCustom(selectedTab: $selectedTab)
-            }
-        }.navigationBarBackButtonHidden(true)
+//        ZStack{
+//            switch(self.selectedTab.page){
+//            case 1:
+//                HomePageView()
+//            case 2:
+//                ScanPageView()
+//            case 3:
+//                StudentListView()
+//            case 4:
+//                ProfileView()
+//            default:
+//                StudentListView()
+//            }
+//
+//            VStack{
+//                Spacer()
+//                TabViewCustom(selectedTab: $selectedTab)
+//            }
+//        }.navigationBarBackButtonHidden(true)
+                ZStack{
+                    switch(self.selectedTab.page){
+                    case 1:
+                        HomePageNewView()
+                    case 2:
+                        EmptyView()
+                    case 3:
+                        StudentListView()
+                    case 4:
+                        ProfilePageNewView()
+                    default:
+                       EmptyView()
+                    }
+        
+                    VStack{
+                        Spacer()
+                        TabViewCustom(selectedTab: $selectedTab)
+                    }
+                }.navigationBarBackButtonHidden(true)
+        
     }
 }
 

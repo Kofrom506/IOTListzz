@@ -45,6 +45,19 @@
 		FA5A50A22946C7620039C2CF /* ProfileViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A50A12946C7620039C2CF /* ProfileViewCard.swift */; };
 		FA5A50A5294734800039C2CF /* StudentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A50A4294734800039C2CF /* StudentListViewModel.swift */; };
 		FA660ADE29543EC900F172CA /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660ADD29543EC900F172CA /* WeatherService.swift */; };
+		FA660AE02955FBDC00F172CA /* LoginPageNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660ADF2955FBDC00F172CA /* LoginPageNewView.swift */; };
+		FA660AE22955FC5E00F172CA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660AE12955FC5E00F172CA /* SwiftUIView.swift */; };
+		FA660B15295754D800F172CA /* LoginPageNewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B14295754D800F172CA /* LoginPageNewViewModel.swift */; };
+		FA660B182957557500F172CA /* ProfilePageNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B172957557500F172CA /* ProfilePageNewView.swift */; };
+		FA660B1A2957558300F172CA /* ProfilePageNewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B192957558300F172CA /* ProfilePageNewViewModel.swift */; };
+		FA660B1C2957E16B00F172CA /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B1B2957E16B00F172CA /* Animation.swift */; };
+		FA660B1E2957E55100F172CA /* eartquake_lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = FA660B1D2957E55000F172CA /* eartquake_lottie.json */; };
+		FA660B212957E68300F172CA /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B202957E68300F172CA /* OnBoardingView.swift */; };
+		FA660B232957E69200F172CA /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B222957E69200F172CA /* OnBoardingViewModel.swift */; };
+		FA660B252957E6E900F172CA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B242957E6E900F172CA /* PrimaryButton.swift */; };
+		FA660B272957E73C00F172CA /* evan.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B262957E73C00F172CA /* evan.swift */; };
+		FA660B2A2957EC7F00F172CA /* HomePageNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B292957EC7E00F172CA /* HomePageNewView.swift */; };
+		FA660B2C2957EC9500F172CA /* HomePageNewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B2B2957EC9500F172CA /* HomePageNewViewModel.swift */; };
 		FA8B63CE2940510E00E464D6 /* TextFieldWish.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B63CD2940510E00E464D6 /* TextFieldWish.swift */; };
 		FA8B63D029405D4A00E464D6 /* TabViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B63CF29405D4A00E464D6 /* TabViewCustom.swift */; };
 		FAA6058B294F01F800DEDAA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAA6058A294F01F800DEDAA6 /* GoogleService-Info.plist */; };
@@ -120,6 +133,19 @@
 		FA5A50A12946C7620039C2CF /* ProfileViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCard.swift; sourceTree = "<group>"; };
 		FA5A50A4294734800039C2CF /* StudentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewModel.swift; sourceTree = "<group>"; };
 		FA660ADD29543EC900F172CA /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		FA660ADF2955FBDC00F172CA /* LoginPageNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageNewView.swift; sourceTree = "<group>"; };
+		FA660AE12955FC5E00F172CA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		FA660B14295754D800F172CA /* LoginPageNewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageNewViewModel.swift; sourceTree = "<group>"; };
+		FA660B172957557500F172CA /* ProfilePageNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageNewView.swift; sourceTree = "<group>"; };
+		FA660B192957558300F172CA /* ProfilePageNewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageNewViewModel.swift; sourceTree = "<group>"; };
+		FA660B1B2957E16B00F172CA /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		FA660B1D2957E55000F172CA /* eartquake_lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eartquake_lottie.json; sourceTree = "<group>"; };
+		FA660B202957E68300F172CA /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		FA660B222957E69200F172CA /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
+		FA660B242957E6E900F172CA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		FA660B262957E73C00F172CA /* evan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = evan.swift; sourceTree = "<group>"; };
+		FA660B292957EC7E00F172CA /* HomePageNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageNewView.swift; sourceTree = "<group>"; };
+		FA660B2B2957EC9500F172CA /* HomePageNewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageNewViewModel.swift; sourceTree = "<group>"; };
 		FA8B63CD2940510E00E464D6 /* TextFieldWish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWish.swift; sourceTree = "<group>"; };
 		FA8B63CF29405D4A00E464D6 /* TabViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewCustom.swift; sourceTree = "<group>"; };
 		FAA6058A294F01F800DEDAA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -250,6 +276,42 @@
 			path = StudentList;
 			sourceTree = "<group>";
 		};
+		FA660B13295754BD00F172CA /* LoginPageNew */ = {
+			isa = PBXGroup;
+			children = (
+				FA660ADF2955FBDC00F172CA /* LoginPageNewView.swift */,
+				FA660B14295754D800F172CA /* LoginPageNewViewModel.swift */,
+			);
+			path = LoginPageNew;
+			sourceTree = "<group>";
+		};
+		FA660B162957556400F172CA /* ProfilePageNew */ = {
+			isa = PBXGroup;
+			children = (
+				FA660B172957557500F172CA /* ProfilePageNewView.swift */,
+				FA660B192957558300F172CA /* ProfilePageNewViewModel.swift */,
+			);
+			path = ProfilePageNew;
+			sourceTree = "<group>";
+		};
+		FA660B1F2957E66B00F172CA /* OnboardingView */ = {
+			isa = PBXGroup;
+			children = (
+				FA660B202957E68300F172CA /* OnBoardingView.swift */,
+				FA660B222957E69200F172CA /* OnBoardingViewModel.swift */,
+			);
+			path = OnboardingView;
+			sourceTree = "<group>";
+		};
+		FA660B282957EC6200F172CA /* HomePageNew */ = {
+			isa = PBXGroup;
+			children = (
+				FA660B292957EC7E00F172CA /* HomePageNewView.swift */,
+				FA660B2B2957EC9500F172CA /* HomePageNewViewModel.swift */,
+			);
+			path = HomePageNew;
+			sourceTree = "<group>";
+		};
 		FAB4A8702948776A006D27FA /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +357,7 @@
 				FADD5E312939DEFE00AE9EF8 /* Themes */,
 				FADD5E1A2939D60400AE9EF8 /* sisbenProjekApp.swift */,
 				FADD5E1E2939D60500AE9EF8 /* Assets.xcassets */,
+				FA660B1D2957E55000F172CA /* eartquake_lottie.json */,
 				FA5A50942944ACD80039C2CF /* Colors.xcassets */,
 				FA5A5090294468120039C2CF /* 1.png */,
 				FA5A5091294468120039C2CF /* 2.png */,
@@ -314,6 +377,10 @@
 		FADD5E2A2939DE0000AE9EF8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FA660B282957EC6200F172CA /* HomePageNew */,
+				FA660B1F2957E66B00F172CA /* OnboardingView */,
+				FA660B162957556400F172CA /* ProfilePageNew */,
+				FA660B13295754BD00F172CA /* LoginPageNew */,
 				FA5A50A32947343E0039C2CF /* StudentList */,
 				FA5A509C2945CF340039C2CF /* RegisterPage */,
 				FADD5E452939F0C800AE9EF8 /* LoginPage */,
@@ -333,6 +400,8 @@
 				FA8B63CD2940510E00E464D6 /* TextFieldWish.swift */,
 				FA5A50962944C82E0039C2CF /* SecureFieldWish.swift */,
 				FA5A50A12946C7620039C2CF /* ProfileViewCard.swift */,
+				FA660B1B2957E16B00F172CA /* Animation.swift */,
+				FA660B242957E6E900F172CA /* PrimaryButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -343,6 +412,7 @@
 				FADD5E282939D66B00AE9EF8 /* Student.swift */,
 				FA5A50982945932E0039C2CF /* Storyboard.storyboard */,
 				FA5637A529433C79006833EB /* MyPlayground.playground */,
+				FA660B262957E73C00F172CA /* evan.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -396,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				FADD5E3F2939E21C00AE9EF8 /* HomePageView.swift */,
+				FA660AE12955FC5E00F172CA /* SwiftUIView.swift */,
 				FADD5E412939E22C00AE9EF8 /* HomePageViewModel.swift */,
 			);
 			path = HomePage;
@@ -507,6 +578,7 @@
 				FA5A507E294451DC0039C2CF /* Poppins-Regular.ttf in Resources */,
 				FA5A508B294451DC0039C2CF /* Poppins-MediumItalic.ttf in Resources */,
 				FA5A506A2944516C0039C2CF /* LeagueSpartan-SemiBold.ttf in Resources */,
+				FA660B1E2957E55100F172CA /* eartquake_lottie.json in Resources */,
 				FA5A507F294451DC0039C2CF /* Poppins-ExtraBoldItalic.ttf in Resources */,
 				FA5A50622944516C0039C2CF /* LeagueSpartan-Medium.ttf in Resources */,
 				FA5A5081294451DC0039C2CF /* Poppins-Bold.ttf in Resources */,
@@ -578,38 +650,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA660B1A2957558300F172CA /* ProfilePageNewViewModel.swift in Sources */,
 				FA5A50A5294734800039C2CF /* StudentListViewModel.swift in Sources */,
 				FADD5E3E2939E20F00AE9EF8 /* ScanPageViewModel.swift in Sources */,
 				FADD5E3A2939E1F800AE9EF8 /* ProfileViewModel.swift in Sources */,
 				FADD5E1D2939D60400AE9EF8 /* StudentListView.swift in Sources */,
 				FA8B63CE2940510E00E464D6 /* TextFieldWish.swift in Sources */,
 				FADD5E302939DE4000AE9EF8 /* Gender.swift in Sources */,
+				FA660AE02955FBDC00F172CA /* LoginPageNewView.swift in Sources */,
+				FA660B272957E73C00F172CA /* evan.swift in Sources */,
 				FADD5E422939E22C00AE9EF8 /* HomePageViewModel.swift in Sources */,
 				FA5A50A22946C7620039C2CF /* ProfileViewCard.swift in Sources */,
 				FADD5E4D2939F1CA00AE9EF8 /* WWColor.swift in Sources */,
 				FADD5E3C2939E20500AE9EF8 /* ScanPageView.swift in Sources */,
 				FAB4A86F2948772E006D27FA /* ScreenRouter.swift in Sources */,
+				FA660B212957E68300F172CA /* OnBoardingView.swift in Sources */,
 				FAB4A87A29488146006D27FA /* Routing.swift in Sources */,
 				FA8B63D029405D4A00E464D6 /* TabViewCustom.swift in Sources */,
+				FA660B182957557500F172CA /* ProfilePageNewView.swift in Sources */,
 				FA660ADE29543EC900F172CA /* WeatherService.swift in Sources */,
 				FADD5E382939E1EF00AE9EF8 /* ProfileView.swift in Sources */,
 				FA5A509E2945CF420039C2CF /* RegisterPageView.swift in Sources */,
+				FA660B15295754D800F172CA /* LoginPageNewViewModel.swift in Sources */,
 				FADD5E292939D66B00AE9EF8 /* Student.swift in Sources */,
 				FA5A50972944C82E0039C2CF /* SecureFieldWish.swift in Sources */,
 				FA5A50A02945CF570039C2CF /* RegisterPageViewModel.swift in Sources */,
 				FADD5E402939E21C00AE9EF8 /* HomePageView.swift in Sources */,
 				FAB4A87429488123006D27FA /* View + Cover.swift in Sources */,
+				FA660B1C2957E16B00F172CA /* Animation.swift in Sources */,
 				FADD5E4F2939F34F00AE9EF8 /* EmptyStateView.swift in Sources */,
 				FAB4A8762948812D006D27FA /* NavigationNode.swift in Sources */,
 				FADD5E1B2939D60400AE9EF8 /* sisbenProjekApp.swift in Sources */,
+				FA660B232957E69200F172CA /* OnBoardingViewModel.swift in Sources */,
 				FAB4A8782948813A006D27FA /* Router.swift in Sources */,
 				FAB4A87229488118006D27FA /* RouterFactory.swift in Sources */,
 				FADD5E512939F5E200AE9EF8 /* ViewPadding.swift in Sources */,
 				FADD5E442939E24100AE9EF8 /* User.swift in Sources */,
+				FA660AE22955FC5E00F172CA /* SwiftUIView.swift in Sources */,
 				FAB4A87C294890D7006D27FA /* CustomTabView.swift in Sources */,
 				FADD5E472939F0D500AE9EF8 /* LoginPageView.swift in Sources */,
 				FADD5E492939F0E600AE9EF8 /* LoginPageViewModel.swift in Sources */,
+				FA660B252957E6E900F172CA /* PrimaryButton.swift in Sources */,
+				FA660B2C2957EC9500F172CA /* HomePageNewViewModel.swift in Sources */,
 				FADD5E4B2939F14800AE9EF8 /* WWFont.swift in Sources */,
+				FA660B2A2957EC7F00F172CA /* HomePageNewView.swift in Sources */,
 				FAD1E64E294427DE009DCAF9 /* Role.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

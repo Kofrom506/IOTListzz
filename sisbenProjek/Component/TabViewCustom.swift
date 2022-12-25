@@ -35,6 +35,22 @@ enum Tab: String, CaseIterable{
     }
 }
 
+//struct TabViewCustom: View {
+//    @Binding var selectedTab: Tab
+//
+//    @ViewBuilder
+//       func getTabView(type: Tab) -> some View {
+//           switch selectedTab {
+//           case .homeViewPage:
+//               HomePageView()
+//           case .scanViewPage:
+//               ScanPageView()
+//           case .profileViewPage:
+//               ProfileView()
+//           case .studentListPage:
+//               StudentListView()
+//           }
+//       }
 struct TabViewCustom: View {
     @Binding var selectedTab: Tab
     
@@ -42,11 +58,11 @@ struct TabViewCustom: View {
        func getTabView(type: Tab) -> some View {
            switch selectedTab {
            case .homeViewPage:
-               HomePageView()
+               HomePageNewView()
            case .scanViewPage:
                ScanPageView()
            case .profileViewPage:
-               ProfileView()
+               ProfilePageNewView()
            case .studentListPage:
                StudentListView()
            }
