@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="questionmark.app.fill" catalog="system" highlightedImage="sun.min.fill" translatesAutoresizingMaskIntoConstraints="NO" id="yGy-bU-RFv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clo" highlightedImage="rain" translatesAutoresizingMaskIntoConstraints="NO" id="yGy-bU-RFv">
                                 <rect key="frame" x="76" y="362" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -31,8 +31,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="questionmark.app.fill" catalog="system" width="128" height="114"/>
-        <image name="sun.min.fill" catalog="system" width="128" height="123"/>
+        <image name="clo" width="128" height="128"/>
+        <image name="rain" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

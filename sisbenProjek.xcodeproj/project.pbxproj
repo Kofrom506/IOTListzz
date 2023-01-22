@@ -58,9 +58,15 @@
 		FA660B272957E73C00F172CA /* evan.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B262957E73C00F172CA /* evan.swift */; };
 		FA660B2A2957EC7F00F172CA /* HomePageNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B292957EC7E00F172CA /* HomePageNewView.swift */; };
 		FA660B2C2957EC9500F172CA /* HomePageNewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B2B2957EC9500F172CA /* HomePageNewViewModel.swift */; };
+		FA660B2F2957FD8200F172CA /* WeatherAPIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B2E2957FD8200F172CA /* WeatherAPIView.swift */; };
+		FA660B312957FD8D00F172CA /* WeatherAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B302957FD8D00F172CA /* WeatherAPIViewModel.swift */; };
+		FA660B342957FE0000F172CA /* ChartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B332957FE0000F172CA /* ChartListView.swift */; };
+		FA660B362957FE1100F172CA /* ChartListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B352957FE1100F172CA /* ChartListViewModel.swift */; };
+		FA660B382958793200F172CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA660B372958793200F172CA /* GoogleService-Info.plist */; };
+		FA660B3A29587B0000F172CA /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA660B3929587B0000F172CA /* Slider.swift */; };
+		FA660B3C295897E600F172CA /* warning.json in Resources */ = {isa = PBXBuildFile; fileRef = FA660B3B295897E600F172CA /* warning.json */; };
 		FA8B63CE2940510E00E464D6 /* TextFieldWish.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B63CD2940510E00E464D6 /* TextFieldWish.swift */; };
 		FA8B63D029405D4A00E464D6 /* TabViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B63CF29405D4A00E464D6 /* TabViewCustom.swift */; };
-		FAA6058B294F01F800DEDAA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAA6058A294F01F800DEDAA6 /* GoogleService-Info.plist */; };
 		FAB4A86F2948772E006D27FA /* ScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A86E2948772E006D27FA /* ScreenRouter.swift */; };
 		FAB4A87229488118006D27FA /* RouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A87129488118006D27FA /* RouterFactory.swift */; };
 		FAB4A87429488123006D27FA /* View + Cover.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A87329488123006D27FA /* View + Cover.swift */; };
@@ -146,9 +152,15 @@
 		FA660B262957E73C00F172CA /* evan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = evan.swift; sourceTree = "<group>"; };
 		FA660B292957EC7E00F172CA /* HomePageNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageNewView.swift; sourceTree = "<group>"; };
 		FA660B2B2957EC9500F172CA /* HomePageNewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageNewViewModel.swift; sourceTree = "<group>"; };
+		FA660B2E2957FD8200F172CA /* WeatherAPIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIView.swift; sourceTree = "<group>"; };
+		FA660B302957FD8D00F172CA /* WeatherAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIViewModel.swift; sourceTree = "<group>"; };
+		FA660B332957FE0000F172CA /* ChartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListView.swift; sourceTree = "<group>"; };
+		FA660B352957FE1100F172CA /* ChartListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListViewModel.swift; sourceTree = "<group>"; };
+		FA660B372958793200F172CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA660B3929587B0000F172CA /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
+		FA660B3B295897E600F172CA /* warning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warning.json; sourceTree = "<group>"; };
 		FA8B63CD2940510E00E464D6 /* TextFieldWish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWish.swift; sourceTree = "<group>"; };
 		FA8B63CF29405D4A00E464D6 /* TabViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewCustom.swift; sourceTree = "<group>"; };
-		FAA6058A294F01F800DEDAA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FAB4A86E2948772E006D27FA /* ScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRouter.swift; sourceTree = "<group>"; };
 		FAB4A87129488118006D27FA /* RouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFactory.swift; sourceTree = "<group>"; };
 		FAB4A87329488123006D27FA /* View + Cover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Cover.swift"; sourceTree = "<group>"; };
@@ -312,6 +324,24 @@
 			path = HomePageNew;
 			sourceTree = "<group>";
 		};
+		FA660B2D2957FD6B00F172CA /* WeatherAPI */ = {
+			isa = PBXGroup;
+			children = (
+				FA660B2E2957FD8200F172CA /* WeatherAPIView.swift */,
+				FA660B302957FD8D00F172CA /* WeatherAPIViewModel.swift */,
+			);
+			path = WeatherAPI;
+			sourceTree = "<group>";
+		};
+		FA660B322957FDE900F172CA /* ChartList */ = {
+			isa = PBXGroup;
+			children = (
+				FA660B332957FE0000F172CA /* ChartListView.swift */,
+				FA660B352957FE1100F172CA /* ChartListViewModel.swift */,
+			);
+			path = ChartList;
+			sourceTree = "<group>";
+		};
 		FAB4A8702948776A006D27FA /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,7 +375,7 @@
 		FADD5E192939D60400AE9EF8 /* sisbenProjek */ = {
 			isa = PBXGroup;
 			children = (
-				FAA6058A294F01F800DEDAA6 /* GoogleService-Info.plist */,
+				FA660B372958793200F172CA /* GoogleService-Info.plist */,
 				FA5A5055294450400039C2CF /* Info.plist */,
 				FADD5E332939DF2C00AE9EF8 /* Router */,
 				FADD5E322939DF2000AE9EF8 /* Helpers */,
@@ -358,6 +388,7 @@
 				FADD5E1A2939D60400AE9EF8 /* sisbenProjekApp.swift */,
 				FADD5E1E2939D60500AE9EF8 /* Assets.xcassets */,
 				FA660B1D2957E55000F172CA /* eartquake_lottie.json */,
+				FA660B3B295897E600F172CA /* warning.json */,
 				FA5A50942944ACD80039C2CF /* Colors.xcassets */,
 				FA5A5090294468120039C2CF /* 1.png */,
 				FA5A5091294468120039C2CF /* 2.png */,
@@ -377,6 +408,8 @@
 		FADD5E2A2939DE0000AE9EF8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FA660B322957FDE900F172CA /* ChartList */,
+				FA660B2D2957FD6B00F172CA /* WeatherAPI */,
 				FA660B282957EC6200F172CA /* HomePageNew */,
 				FA660B1F2957E66B00F172CA /* OnboardingView */,
 				FA660B162957556400F172CA /* ProfilePageNew */,
@@ -402,6 +435,7 @@
 				FA5A50A12946C7620039C2CF /* ProfileViewCard.swift */,
 				FA660B1B2957E16B00F172CA /* Animation.swift */,
 				FA660B242957E6E900F172CA /* PrimaryButton.swift */,
+				FA660B3929587B0000F172CA /* Slider.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -581,10 +615,12 @@
 				FA660B1E2957E55100F172CA /* eartquake_lottie.json in Resources */,
 				FA5A507F294451DC0039C2CF /* Poppins-ExtraBoldItalic.ttf in Resources */,
 				FA5A50622944516C0039C2CF /* LeagueSpartan-Medium.ttf in Resources */,
+				FA660B382958793200F172CA /* GoogleService-Info.plist in Resources */,
 				FA5A5081294451DC0039C2CF /* Poppins-Bold.ttf in Resources */,
 				FA5A50682944516C0039C2CF /* LeagueSpartan-Bold.ttf in Resources */,
 				FA5A50642944516C0039C2CF /* LeagueSpartan-Black.ttf in Resources */,
 				FA5A5087294451DC0039C2CF /* Poppins-Medium.ttf in Resources */,
+				FA660B3C295897E600F172CA /* warning.json in Resources */,
 				FA5A508C294451DC0039C2CF /* Poppins-SemiBold.ttf in Resources */,
 				FA5A508D294451DC0039C2CF /* Poppins-BoldItalic.ttf in Resources */,
 				FA5A50992945932E0039C2CF /* Storyboard.storyboard in Resources */,
@@ -593,7 +629,6 @@
 				FA5A5080294451DC0039C2CF /* Poppins-ExtraBold.ttf in Resources */,
 				FA5A508A294451DC0039C2CF /* Poppins-Light.ttf in Resources */,
 				FA5A5088294451DC0039C2CF /* Poppins-ExtraLight.ttf in Resources */,
-				FAA6058B294F01F800DEDAA6 /* GoogleService-Info.plist in Resources */,
 				FA5A50672944516C0039C2CF /* LeagueSpartan-ExtraBold.ttf in Resources */,
 				FA5A50952944ACD80039C2CF /* Colors.xcassets in Resources */,
 				FA5A50632944516C0039C2CF /* LeagueSpartan-Thin.ttf in Resources */,
@@ -652,6 +687,7 @@
 			files = (
 				FA660B1A2957558300F172CA /* ProfilePageNewViewModel.swift in Sources */,
 				FA5A50A5294734800039C2CF /* StudentListViewModel.swift in Sources */,
+				FA660B312957FD8D00F172CA /* WeatherAPIViewModel.swift in Sources */,
 				FADD5E3E2939E20F00AE9EF8 /* ScanPageViewModel.swift in Sources */,
 				FADD5E3A2939E1F800AE9EF8 /* ProfileViewModel.swift in Sources */,
 				FADD5E1D2939D60400AE9EF8 /* StudentListView.swift in Sources */,
@@ -663,7 +699,9 @@
 				FA5A50A22946C7620039C2CF /* ProfileViewCard.swift in Sources */,
 				FADD5E4D2939F1CA00AE9EF8 /* WWColor.swift in Sources */,
 				FADD5E3C2939E20500AE9EF8 /* ScanPageView.swift in Sources */,
+				FA660B3A29587B0000F172CA /* Slider.swift in Sources */,
 				FAB4A86F2948772E006D27FA /* ScreenRouter.swift in Sources */,
+				FA660B2F2957FD8200F172CA /* WeatherAPIView.swift in Sources */,
 				FA660B212957E68300F172CA /* OnBoardingView.swift in Sources */,
 				FAB4A87A29488146006D27FA /* Routing.swift in Sources */,
 				FA8B63D029405D4A00E464D6 /* TabViewCustom.swift in Sources */,
@@ -687,6 +725,7 @@
 				FADD5E512939F5E200AE9EF8 /* ViewPadding.swift in Sources */,
 				FADD5E442939E24100AE9EF8 /* User.swift in Sources */,
 				FA660AE22955FC5E00F172CA /* SwiftUIView.swift in Sources */,
+				FA660B342957FE0000F172CA /* ChartListView.swift in Sources */,
 				FAB4A87C294890D7006D27FA /* CustomTabView.swift in Sources */,
 				FADD5E472939F0D500AE9EF8 /* LoginPageView.swift in Sources */,
 				FADD5E492939F0E600AE9EF8 /* LoginPageViewModel.swift in Sources */,
@@ -695,6 +734,7 @@
 				FADD5E4B2939F14800AE9EF8 /* WWFont.swift in Sources */,
 				FA660B2A2957EC7F00F172CA /* HomePageNewView.swift in Sources */,
 				FAD1E64E294427DE009DCAF9 /* Role.swift in Sources */,
+				FA660B362957FE1100F172CA /* ChartListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

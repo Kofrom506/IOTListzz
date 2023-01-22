@@ -18,6 +18,7 @@ class StudentListViewModel: ObservableObject {
     @Published var temperature: String? = nil
     @Published var range: Int? = nil
     @Published var attendance: Int? = nil
+//    @Binding private var isEarthquake: Bool = false
     func readValue(){
         var child = ref.child("Sensor").child("data")
         child.observeSingleEvent(of: .value) { snapshot in
@@ -86,6 +87,7 @@ class StudentListViewModel: ObservableObject {
             self.studentList.append(evan)
         }
     }
+   
 //    func readObject(){
 //        
 //    }

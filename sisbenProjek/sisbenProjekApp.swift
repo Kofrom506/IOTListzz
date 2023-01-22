@@ -57,9 +57,9 @@ struct mainView: View{
                     case 1:
                         HomePageNewView()
                     case 2:
-                        EmptyView()
+                        WeatherAPIView()
                     case 3:
-                        StudentListView()
+                        ChartListView()
                     case 4:
                         ProfilePageNewView()
                     default:

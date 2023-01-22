@@ -44,7 +44,7 @@ struct RegisterPageView: View {
                 VStack(alignment: .leading) {
                     Spacer()
                         .frame(height: geo.size.height*0.03)
-                    Image("logo_only")
+                    Image("register")
                         .resizable()
                         .scaledToFit()
                         .padding(.horizontal, ViewPadding.xxlarge)
@@ -143,7 +143,7 @@ struct RegisterPageView: View {
                             print("Succeed")
                         } label: {
                             NavigationLink {
-                                LoginPageView()
+                                LoginPageNewView()
                             } label: {
                                 
                                 Text("Register")

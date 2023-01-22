@@ -16,8 +16,8 @@ enum Tab: String, CaseIterable{
     var symbol: String {
         switch self {
         case .homeViewPage:       return "house"
-        case .scanViewPage:        return "qrcode"
-        case .studentListPage:      return "studentdesk"
+        case .scanViewPage:        return "cloud"
+        case .studentListPage:      return "waveform.path.ecg"
         case .profileViewPage:   return "person.crop.circle"
             
         }
@@ -60,7 +60,7 @@ struct TabViewCustom: View {
            case .homeViewPage:
                HomePageNewView()
            case .scanViewPage:
-               ScanPageView()
+                WeatherAPIView()
            case .profileViewPage:
                ProfilePageNewView()
            case .studentListPage:
@@ -73,7 +73,7 @@ struct TabViewCustom: View {
             HStack{
                 ForEach(Tab.allCases, id: \.rawValue) { tab in
                     Spacer()
-                    Image(systemName: selectedTab == tab && tab != .scanViewPage && tab != .studentListPage ? tab.symbol + ".fill" : tab.symbol )
+                    Image(systemName: selectedTab == tab  && tab != .studentListPage ? tab.symbol + ".fill" : tab.symbol )
                         .scaleEffect(tab == selectedTab ? 1.25 : 1.0)
                         .foregroundColor(tab == selectedTab ? WWColor.purple : .black)
                         .onTapGesture {
