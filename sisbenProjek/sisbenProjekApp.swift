@@ -7,7 +7,8 @@
 
 import SwiftUI
 import Firebase
-
+import FirebaseAuth
+import FirebaseCore
 
 
 
@@ -44,7 +45,7 @@ struct mainView: View{
             case 4:
                 ProfileView()
             default:
-                StudentListView()
+                HomePageView()
             }
             
             VStack{
