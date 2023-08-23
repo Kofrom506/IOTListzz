@@ -75,7 +75,7 @@ struct RegisterPageView: View {
                                     } label: {
                                         Text("Female")
                                     }
-
+                                    
                                 }label:{
                                     
                                     HStack{
@@ -84,14 +84,14 @@ struct RegisterPageView: View {
                                             .scaledToFit()
                                             .padding(ViewPadding.medium)
                                         
-//                                        TestEnum(rawValue: "Name")
+                                        //                                        TestEnum(rawValue: "Name")
                                         Text(self.gender.rawValue)
                                             .font(WWFont.regular(size: 14))
                                             .foregroundColor(WWColor.grey)
-                                            Spacer()
+                                        Spacer()
                                     }
-//
-//
+                                    //
+                                    //
                                     
                                 }
                                 .frame(height: 44)
@@ -101,16 +101,20 @@ struct RegisterPageView: View {
                                 
                                 Menu{
                                     Button {
+                                        role = .farmer
+                                    } label: {
+                                        Text("farmer")
+                                    }
+                                    Button {
+                                        role = .hobbyist
+                                    } label: {
+                                        Text("hobbyist")
+                                    }
+                                    Button {
                                         role = .student
                                     } label: {
                                         Text("Student")
                                     }
-                                    Button {
-                                        role = .teacher
-                                    } label: {
-                                        Text("Teacher")
-                                    }
-
                                 }label:{
                                     
                                     HStack{
@@ -119,14 +123,14 @@ struct RegisterPageView: View {
                                             .scaledToFit()
                                             .padding(ViewPadding.medium)
                                         
-//                                        TestEnum(rawValue: "Name")
+                                        //                                        TestEnum(rawValue: "Name")
                                         Text(self.role.rawValue)
                                             .font(WWFont.regular(size: 14))
                                             .foregroundColor(WWColor.grey)
-                                            Spacer()
+                                        Spacer()
                                     }
-//
-//
+                                    //
+                                    //
                                     
                                 }
                                 .frame(height: 44)
@@ -143,7 +147,7 @@ struct RegisterPageView: View {
                             print("Succeed")
                         } label: {
                             NavigationLink {
-                                LoginPageNewView()
+                                LoginPageView()
                             } label: {
                                 
                                 Text("Register")
@@ -167,7 +171,7 @@ struct RegisterPageView: View {
                     
                     
                     .ignoresSafeArea()
-                  
+                    
                     .padding(ViewPadding.large)
                     .background(
                         WWColor.white
@@ -181,7 +185,7 @@ struct RegisterPageView: View {
                 
             }
         }.navigationBarBackButtonHidden(true)
-        .ignoresSafeArea()
+            .ignoresSafeArea()
         
         
     }

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Copy of Copy of Black and White Vintage Retro Paper Texture Music Band Studio Logo (4).png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

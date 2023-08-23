@@ -19,7 +19,6 @@ struct CustomTabView: View {
     }
     var body: some View {
         ZStack{
-            
             VStack{
                 Spacer()
                 TabViewCustom(selectedTab: $selectedTab)

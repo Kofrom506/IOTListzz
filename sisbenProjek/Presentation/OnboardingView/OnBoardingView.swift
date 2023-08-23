@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    var data: OnboardingData
+//    var data: OnboardingData
+    @EnvironmentObject var screenRouter: ScreenRouter
     @State private var currentStep = 0
-    
     var body: some View {
         ZStack {
             WWColor.purplePastel.ignoresSafeArea(.all)
             VStack {
                 GeometryReader { geo in
-                    
                     TabView (selection: $currentStep) {
                         ForEach(OnboardingData.list) { it in
                             VStack {
@@ -77,11 +76,12 @@ struct OnboardingView: View {
                 }
                 .edgesIgnoringSafeArea(.all)
                 
+                
                 PrimaryButton(title: currentStep < OnboardingData.list.count - 1 ? "Continue" : "Get Started"){
                     if self.currentStep < OnboardingData.list.count - 1 {
                         self.currentStep += 1
                     } else {
-                        print("")
+                        screenRouter.navigateTo(.login)
                     }
                 }
                 .padding(.vertical, ViewPadding.small)
@@ -112,7 +112,7 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView(data: OnboardingData.list.first!)
+        OnboardingView()
 //            .previewDevice("iPhone 14 Pro Max")
 //        OnboardingView(data: OnboardingData.list.first!)
 //            .previewDevice("iPhone SE (3rd generation)")

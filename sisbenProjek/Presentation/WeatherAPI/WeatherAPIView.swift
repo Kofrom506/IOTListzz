@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct WeatherAPIView: View {
-    @State var userRole: Role = .student
+    @ObservedObject var plantListViewModel = WeatherAPIViewModel()
+    //    var data: Plant
+    @EnvironmentObject var screenRouter: ScreenRouter
+    @State private var showingSheet = false
+    @State var selectedPlant: Plant?
     var body: some View {
         GeometryReader{geo in
             ZStack {
@@ -20,7 +24,6 @@ struct WeatherAPIView: View {
                     .ignoresSafeArea(.all)
                 VStack{
                     Image("leaves_bg")
-                    
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: .infinity)
@@ -32,194 +35,38 @@ struct WeatherAPIView: View {
                 ScrollView(showsIndicators: false) {
                     VStack (alignment: .leading, spacing: ViewPadding.mini) {
                         HStack {
-                            Text("Temperature Today")
+                            Text("Planting Right Now")
                                 .font(WWFont.semiBold(fontFamily: .poppins,size: 30))
                                 .foregroundColor(WWColor.white)
                                 .lineLimit(2)
                             
                             Spacer()
-            
+                            
                         }
                         .padding(.top, ViewPadding.small)
-                     
-                        
-                        HStack {
-                            
-                            VStack (alignment: .leading, spacing: 0) {
-                                Text("RIGHT NOW")
-                                    .font(WWFont.medium(fontFamily: .poppins,size: 15))
-                                    .foregroundColor(WWColor.grey)
-                                    .padding(.bottom, ViewPadding.mini)
-                                HStack(alignment: .bottom, spacing: 0) {
-                                    Text("30°")
-                                        .font(WWFont.semiBold(fontFamily: .poppins,size: 32))
-                                        .foregroundColor(WWColor.black)
-                                        .frame(maxHeight: .infinity)
-                                        .lineLimit(1)
-                                    Text("C")
-                                        .font(WWFont.semiBold(fontFamily: .poppins,size: 20))
-                                        .foregroundColor(WWColor.black)
-                                        .padding(.bottom,2)
-                                        .lineLimit(1)
-                                }
-                                
-                                Text("Jakarta Raya")
-                                    .font(WWFont.light(fontFamily: .poppins,size: 11))
-                                    .foregroundColor(WWColor.black)
-                                    .padding(.bottom, ViewPadding.medium)
-                                    .lineLimit(1)
-                                
-                                
-                            }
-                            Spacer()
-                            Image(systemName: "sun.min.fill")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: geo.size.height*0.1)
-                                .foregroundColor(WWColor.orange)
-                            
-                            
-                            
-                        }.padding(.all, ViewPadding.xmedium)
-                            .frame(maxWidth: .infinity)
-                            .background(WWColor.purpleBackground)
-                            .cornerRadius(20)
-                            .padding(.top, ViewPadding.medium)
-                            .padding(.bottom, ViewPadding.small)
+                        CardView(geo: geo)
                         Spacer()
                             .frame(height: 30)
-                        Text("Earlier Temperature")
+                        Text("Choose Plant")
                             .font(WWFont.semiBold(fontFamily: .poppins,size: 30))
                             .foregroundColor(WWColor.white)
                             .lineLimit(2)
-                        HStack {
-                            VStack (alignment: .leading, spacing: 0) {
-                                Text("Yesterday")
-                                    .font(WWFont.medium(fontFamily: .poppins,size: 15))
-                                    .foregroundColor(WWColor.grey)
-                                    .padding(.bottom, ViewPadding.mini)
-                                HStack(alignment: .bottom, spacing: 0) {
-                                    Text("27°")
-                                        .font(WWFont.semiBold(fontFamily: .poppins,size: 32))
-                                        .foregroundColor(WWColor.black)
-                                        .frame(maxHeight: .infinity)
-                                        .lineLimit(1)
-                                    Text("C")
-                                        .font(WWFont.semiBold(fontFamily: .poppins,size: 20))
-                                        .foregroundColor(WWColor.black)
-                                        .padding(.bottom,2)
-                                        .lineLimit(1)
+                        
+                        
+                        ForEach(Plant.plantList) { plant in
+                            CardView(geo: geo, plant: plant)
+                                .onLongPressGesture(perform: {
+                                    showingSheet.toggle()
+                                    
+                                    
+                                    
+                                })
+                                .sheet(isPresented: $showingSheet) {
+                                    PlantDetailView(plant: plant)
                                 }
-                                
-                                Text("Jakarta Raya")
-                                    .font(WWFont.light(fontFamily: .poppins,size: 11))
-                                    .foregroundColor(WWColor.black)
-                                    .padding(.bottom, ViewPadding.medium)
-                                    .lineLimit(1)
-                                
-                                
-                            }
-                            Spacer()
-                            Image(systemName: "wind")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: geo.size.height*0.1)
-                                .foregroundColor(WWColor.green)
-                            
-                            
-                            
-                        }.padding(.all, ViewPadding.xmedium)
-                            .frame(maxWidth: .infinity)
-                            .background(WWColor.purpleBackground)
-                            .cornerRadius(20)
-                            .padding(.top, ViewPadding.medium)
-                            .padding(.bottom, ViewPadding.small)
-                        HStack {
-                            
-                            VStack (alignment: .leading, spacing: 0) {
-                                Text("2 Days Ago")
-                                    .font(WWFont.medium(fontFamily: .poppins,size: 15))
-                                    .foregroundColor(WWColor.grey)
-                                    .padding(.bottom, ViewPadding.mini)
-                                HStack(alignment: .bottom, spacing: 0) {
-                                    Text("25.6°")
-                                        .font(WWFont.semiBold(fontFamily: .poppins,size: 32))
-                                        .foregroundColor(WWColor.black)
-                                        .frame(maxHeight: .infinity)
-                                        .lineLimit(1)
-                                    Text("C")
-                                        .font(WWFont.semiBold(fontFamily: .poppins,size: 20))
-                                        .foregroundColor(WWColor.black)
-                                        .padding(.bottom,2)
-                                        .lineLimit(1)
-                                }
-                                
-                                Text("Jakarta Raya")
-                                    .font(WWFont.light(fontFamily: .poppins,size: 11))
-                                    .foregroundColor(WWColor.black)
-                                    .padding(.bottom, ViewPadding.medium)
-                                    .lineLimit(1)
-                                
-                                
-                            }
-                            Spacer()
-                            Image(systemName: "cloud.fill")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: geo.size.height*0.1)
-                                .foregroundColor(WWColor.purple)
-                            
-                            
-                            
-                        }.padding(.all, ViewPadding.xmedium)
-                            .frame(maxWidth: .infinity)
-                            .background(WWColor.purpleBackground)
-                            .cornerRadius(20)
-                            .padding(.top, ViewPadding.medium)
-                            .padding(.bottom, ViewPadding.small)
-                        HStack {
-                            
-                            VStack (alignment: .leading, spacing: 0) {
-                                Text("3 Days Ago")
-                                    .font(WWFont.medium(fontFamily: .poppins,size: 15))
-                                    .foregroundColor(WWColor.grey)
-                                    .padding(.bottom, ViewPadding.mini)
-                                HStack(alignment: .bottom, spacing: 0) {
-                                    Text("25°")
-                                        .font(WWFont.semiBold(fontFamily: .poppins,size: 32))
-                                        .foregroundColor(WWColor.black)
-                                        .frame(maxHeight: .infinity)
-                                        .lineLimit(1)
-                                    Text("C")
-                                        .font(WWFont.semiBold(fontFamily: .poppins,size: 20))
-                                        .foregroundColor(WWColor.black)
-                                        .padding(.bottom,2)
-                                        .lineLimit(1)
-                                }
-                                
-                                Text("Jakarta Raya")
-                                    .font(WWFont.light(fontFamily: .poppins,size: 11))
-                                    .foregroundColor(WWColor.black)
-                                    .padding(.bottom, ViewPadding.medium)
-                                    .lineLimit(1)
-                                
-                                
-                            }
-                            Spacer()
-                            Image(systemName: "cloud.rain.fill")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: geo.size.height*0.1)
-                                .foregroundColor(WWColor.blue)
-                            
-                            
-                            
-                        }.padding(.all, ViewPadding.xmedium)
-                            .frame(maxWidth: .infinity)
-                            .background(WWColor.purpleBackground)
-                            .cornerRadius(20)
-                            .padding(.top, ViewPadding.medium)
-                            .padding(.bottom, ViewPadding.small)
+                        }
+                        
+                        
                     }
                     
                     .padding(.horizontal, ViewPadding.xmedium)
@@ -234,3 +81,4 @@ struct WeatherAPIView_Previews: PreviewProvider {
         WeatherAPIView()
     }
 }
+

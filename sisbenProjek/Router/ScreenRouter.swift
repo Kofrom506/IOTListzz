@@ -15,6 +15,7 @@ enum ScreenRoute: ScreenProtocol {
     case studentList(StudentList)
     case home
     case scan
+    case plantDetail
     case profile(Profile)
     
     enum StudentList{
@@ -97,6 +98,8 @@ enum ScreenRoute: ScreenProtocol {
                        return true
                    case .profile(_):
                        return true
+                   case .plantDetail:
+                       return true
                    }
                }
     //    var embedInNavView: Bool {
@@ -146,95 +149,115 @@ enum ScreenRoute: ScreenProtocol {
     //    }
     //}
     //
-    class ScreenRouterFactory: RouterFactory {
-        //
-        @ViewBuilder func makeBody(for screen: ScreenRoute) -> some View {
-            //
-            //        switch screen {
-            //        case .mainTapView:
-            //            MainTabView()
-            //        case .onboarding(let onboardingView):
-            //            switch onboardingView {
-            //            case .onboardingView:
-            //                OnboardingView(data: OnboardingData.list.first!)
-            //            case .welcomeView:
-            //                WelcomeView()
-            //            }
-            //        case .user(let userView):
-            //            switch userView {
-            //            case .profileView:
-            //                ProfileView()
-            //            case .monthlyIncomeView:
-            //                MonthlyIncomeView()
-            //            case .listBudgetView:
-            //                ListBudgetView()
-            //            case .addBudgetView:
-            //                AddBudgetView()
-            //            case .recommendationBudgetView(let vm):
-            //                RecommendationBudgetView(vm: vm)
-            //            case .setting(let settingView):
-            //                switch settingView {
-            //                case .editProfileView:
-            //                    EditProfileView()
-            //                case .helpSupportView:
-            //                    HelpSupportView()
-            //                case .aboutView:
-            //                    AboutView()
-            //                case .languageView:
-            //                    LanguangeSettingView()
-            //                case .faqView:
-            //                    FAQView()
-            //                case .notificationView:
-            //                    NotificationSettingView()
-            //                }
-            //            }
-            //        case .home(let homeView):
-            //            switch homeView {
-            //            case .homeView:
-            //                HomeView()
-            //            }
-            //        case .wish(let wishView):
-            //            switch wishView {
-            //            case .wishWellView(let vm):
-            //                WishWellView(vm: vm)
-            //            case .listWishView:
-            //                ListWishView()
-            //            case .detailWishView(let vm):
-            //                DetailWishView(vm: vm)
-            //            case .shareWishView(let vm):
-            //                ShareWishView(vm: vm)
-            //            }
-            //        case .assessment(let assessmentView):
-            //            switch assessmentView {
-            //            case .preAssessmentView(let vm):
-            //                PreAssessmentView(vm: vm)
-            //            case .mainAssessmentView(let vm):
-            //                MainAssessmentView(vm: vm)
-            //            case .postAssessmentView(let vm):
-            //                PostAssessmentView(vm: vm)
-            //            case .resultAssessmentView(let vm):
-            //                ResultAssessmentView(vm: vm)
-            //            case .resultAssessmentReusableView(let vm):
-            //                ResultAssessmentReusableView(vm: vm)
-            //            case .guardianDiscoveryView(let vm):
-            //                GuardianDiscoveryView(vm: vm)
-            //            case .guardianRecommendationView(let vm):
-            //                GuardianRecommendationView(vm: vm)
-            //            case .completedAssessmentView(let vm):
-            //                CompletedAssessmentView(vm: vm)
-            //            case .guardianDiscoveryReusableView(let vm):
-            //                GuardianDiscoveryReusableView(vm: vm)
-            //            }
-            //        case .notification(let notificationView):
-            //            switch notificationView {
-            //            case .comingSoonNotificationView:
-            //                ComingSoonNotificationView()
-            //            }
-            //        case .webView(let url):
-            //            WebView(url: url)
-            //        }
-        }
-    }
     
-    typealias ScreenRouter = Router<ScreenRoute, ScreenRouterFactory>
+//
+//    typealias ScreenRouter = Router<ScreenRoute, ScreenRouterFactory>
 }
+class ScreenRouterFactory: RouterFactory {
+    //
+    @ViewBuilder func makeBody(for screen: ScreenRoute) -> some View {
+        switch screen {
+            case .home:
+                HomePageView()
+            case .plantDetail:
+                PlantDetailView(plant: Plant.plantList.first!)
+            case .onboarding:
+                OnboardingView()
+            case .login:
+                LoginPageView()
+            case .register:
+                RegisterPageView(emailAddress: "", fullName: "", role: .hobbyist, gender: .female, password: "")
+            case .studentList(_):
+                StudentListView()
+            case .scan:
+                ScanPageView()
+            case .profile(_):
+                ProfileView()
+            }
+        //
+        //        switch screen {
+        //        case .mainTapView:
+        //            MainTabView()
+        //        case .onboarding(let onboardingView):
+        //            switch onboardingView {
+        //            case .onboardingView:
+        //                OnboardingView(data: OnboardingData.list.first!)
+        //            case .welcomeView:
+        //                WelcomeView()
+        //            }
+        //        case .user(let userView):
+        //            switch userView {
+        //            case .profileView:
+        //                ProfileView()
+        //            case .monthlyIncomeView:
+        //                MonthlyIncomeView()
+        //            case .listBudgetView:
+        //                ListBudgetView()
+        //            case .addBudgetView:
+        //                AddBudgetView()
+        //            case .recommendationBudgetView(let vm):
+        //                RecommendationBudgetView(vm: vm)
+        //            case .setting(let settingView):
+        //                switch settingView {
+        //                case .editProfileView:
+        //                    EditProfileView()
+        //                case .helpSupportView:
+        //                    HelpSupportView()
+        //                case .aboutView:
+        //                    AboutView()
+        //                case .languageView:
+        //                    LanguangeSettingView()
+        //                case .faqView:
+        //                    FAQView()
+        //                case .notificationView:
+        //                    NotificationSettingView()
+        //                }
+        //            }
+        //        case .home(let homeView):
+        //            switch homeView {
+        //            case .homeView:
+        //                HomeView()
+        //            }
+        //        case .wish(let wishView):
+        //            switch wishView {
+        //            case .wishWellView(let vm):
+        //                WishWellView(vm: vm)
+        //            case .listWishView:
+        //                ListWishView()
+        //            case .detailWishView(let vm):
+        //                DetailWishView(vm: vm)
+        //            case .shareWishView(let vm):
+        //                ShareWishView(vm: vm)
+        //            }
+        //        case .assessment(let assessmentView):
+        //            switch assessmentView {
+        //            case .preAssessmentView(let vm):
+        //                PreAssessmentView(vm: vm)
+        //            case .mainAssessmentView(let vm):
+        //                MainAssessmentView(vm: vm)
+        //            case .postAssessmentView(let vm):
+        //                PostAssessmentView(vm: vm)
+        //            case .resultAssessmentView(let vm):
+        //                ResultAssessmentView(vm: vm)
+        //            case .resultAssessmentReusableView(let vm):
+        //                ResultAssessmentReusableView(vm: vm)
+        //            case .guardianDiscoveryView(let vm):
+        //                GuardianDiscoveryView(vm: vm)
+        //            case .guardianRecommendationView(let vm):
+        //                GuardianRecommendationView(vm: vm)
+        //            case .completedAssessmentView(let vm):
+        //                CompletedAssessmentView(vm: vm)
+        //            case .guardianDiscoveryReusableView(let vm):
+        //                GuardianDiscoveryReusableView(vm: vm)
+        //            }
+        //        case .notification(let notificationView):
+        //            switch notificationView {
+        //            case .comingSoonNotificationView:
+        //                ComingSoonNotificationView()
+        //            }
+        //        case .webView(let url):
+        //            WebView(url: url)
+        //        }
+    }
+}
+typealias ScreenRouter = Router<ScreenRoute, ScreenRouterFactory>

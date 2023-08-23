@@ -14,11 +14,9 @@ struct StudentListView: View {
         ZStack{
             WWColor.gradientPurple
                 .ignoresSafeArea()
-            
             VStack(alignment: .center) {
                 VStack{
-                    
-                    Text("Student List")
+                    Text("Device List")
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.top, ViewPadding.medium)
@@ -77,7 +75,7 @@ struct StudentListView: View {
                             .font(WWFont.semiBold(fontFamily: .leagueSpartan, size:15))                    }
                 }.padding(.horizontal,ViewPadding.large)
                 HStack {
-                    Text("Range:" )
+                    Text("EC Level:" )
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.top, ViewPadding.medium)
@@ -95,12 +93,12 @@ struct StudentListView: View {
                             .padding(.top, ViewPadding.medium)
                             .font(WWFont.semiBold(fontFamily: .leagueSpartan, size:15))
                     }
-                    Text("Counter:")
+                    Text("PH Level:")
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.top, ViewPadding.medium)
                         .font(WWFont.semiBold(fontFamily: .leagueSpartan, size:15))
-                    Text(String(viewModel.studentList.count))
+                    Text(String(viewModel.deviceList.count))
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.top, ViewPadding.medium)
@@ -111,8 +109,9 @@ struct StudentListView: View {
                 
                 Form{
                     Section {
-                        ForEach(viewModel.studentList, id: \.id) { student in
-                            if((student.name).contains(searchText)){
+                        ForEach(viewModel.deviceList, id: \.id) { device in
+                            
+                            if((device.name).contains(searchText)){
                                 VStack(alignment: .leading) {
                                     HStack{
                                         Image(systemName: "person")
@@ -120,42 +119,42 @@ struct StudentListView: View {
                                             .frame(maxWidth: 30, maxHeight: 30)
                                             .background(
                                                 WWColor.bluePastel
-                                                
+
                                             )
                                             .clipShape(Circle())
                                         VStack(alignment: .leading){
-                                            Text(student.name)
+                                            Text(device.name)
                                                 .font(WWFont.medium(fontFamily: .poppins, size: 17))
-                                            
-                                            Text(student.email)
+
+                                            Text(device.position)
                                                 .foregroundColor(WWColor.grey)
                                                 .font(WWFont.medium(fontFamily: .poppins, size: 12))
                                         }
                                     }
-                                    
+
                                 }
                             }
                             else if(searchText == ""){
                                 VStack(alignment: .leading) {
                                     HStack{
-                                        Image(systemName: "person")
+                                        Image(systemName: "cpu")
                                             .scaledToFit()
                                             .frame(maxWidth: 30, maxHeight: 30)
                                             .background(
                                                 WWColor.bluePastel
-                                                
+
                                             )
                                             .clipShape(Circle())
                                         VStack(alignment: .leading){
-                                            Text(student.name)
+                                            Text(device.name)
                                                 .font(WWFont.medium(fontFamily: .poppins, size: 17))
-                                            
-                                            Text(student.email)
+
+                                            Text(device.position)
                                                 .foregroundColor(WWColor.grey)
                                                 .font(WWFont.medium(fontFamily: .poppins, size: 12))
                                         }
                                     }
-                                    
+
                                 }
                             }
                             
@@ -174,7 +173,8 @@ struct StudentListView: View {
         
     }
     func delete(at offsets: IndexSet){
-        viewModel.studentList.remove(atOffsets: offsets)
+        print("")
+//        viewModel.deviceList.remove(atOffsets: offsets)
     }
     
     

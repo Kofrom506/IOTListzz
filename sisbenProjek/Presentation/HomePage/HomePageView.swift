@@ -10,7 +10,8 @@ import SwiftUI
 struct HomePageView: View {
 //    @EnvironmentObject var order: Order
     @State var selectedDate:Date=Date()
-    @State var userRole: Role = .student
+    @State var userRole: Role = .hobbyist
+    @State var search: String = ""
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -33,6 +34,7 @@ struct HomePageView: View {
                 
                 ScrollView(showsIndicators: false) {
                     VStack (alignment: .leading, spacing: ViewPadding.mini) {
+                        
                         HStack {
                             Text("Hi, Evan")
                                 .font(WWFont.semiBold(fontFamily: .poppins,size: 32))
@@ -46,7 +48,7 @@ struct HomePageView: View {
                                 .frame(width: 48, height: 48)
                                 .overlay(
                                     HStack(alignment: .center, spacing: 0, content: {
-                                        Image(systemName: "flame.fill")
+                                        Image(systemName: "bell.fill")
                                             .foregroundColor(WWColor.orange)
                                         Text("10")
                                             .foregroundColor(WWColor.black)
@@ -58,11 +60,11 @@ struct HomePageView: View {
                         .padding(.top, ViewPadding.small)
                         
                         HStack(spacing: ViewPadding.small) {
-                            Image("student")
+                            Image("hobbyist")
                                 .resizable()
                                 .frame(width: 20, height: 20)
 
-                            Text("Student")
+                            Text("Hobbyist")
                                 .foregroundColor(WWColor.black)
                                 .font(WWFont.medium(fontFamily: .poppins,size: 14))
                                 .padding(.trailing, ViewPadding.mini)
@@ -74,57 +76,26 @@ struct HomePageView: View {
                         .padding(.top, ViewPadding.mini)
                         .padding(.bottom, ViewPadding.small)
                         
-                        HStack {
-                            
-                            VStack (alignment: .leading, spacing: 0) {
-                                Text("RIGHT NOW")
-                                    .font(WWFont.medium(fontFamily: .poppins,size: 15))
-                                    .foregroundColor(WWColor.grey)
-                                    .padding(.bottom, ViewPadding.mini)
-                                HStack(alignment: .bottom, spacing: 0) {
-                                    Text("32°")
-                                        .font(WWFont.semiBold(fontFamily: .poppins,size: 32))
-                                        .foregroundColor(WWColor.black)
-                                        .frame(maxHeight: .infinity)
-                                        .lineLimit(1)
-                                    Text("C")
-                                        .font(WWFont.semiBold(fontFamily: .poppins,size: 20))
-                                        .foregroundColor(WWColor.black)
-                                        .padding(.bottom,2)
-                                        .lineLimit(1)
-                                }
-                                
-                                Text("Light Thunderstorms")
-                                    .font(WWFont.light(fontFamily: .poppins,size: 11))
-                                    .foregroundColor(WWColor.black)
-                                    .padding(.bottom, ViewPadding.medium)
-                                    .lineLimit(1)
-                                
-                               
-                            }
-                            Spacer()
-                            Image(systemName: "sun.min.fill")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: geo.size.height*0.1)
-                                .foregroundColor(WWColor.orange)
-                       
-                
-                                
-                        }.padding(.all, ViewPadding.xmedium)
-                            .frame(maxWidth: .infinity)
-                            .background(WWColor.purpleBackground)
-                            .cornerRadius(20)
-                            .padding(.top, ViewPadding.medium)
-                        .padding(.bottom, ViewPadding.small)
+                        TextFieldWish(hintText: "Search", value: $search, imageName: "magnifyingglass")
+                            .padding(.vertical, ViewPadding.small)
+                            .padding(.bottom, ViewPadding.small)
                         
+                        ScrollView(.horizontal,showsIndicators: false) {
+                            HStack(spacing: 20){
+                                ForEach(Plant.plantList) { plant in
+                                    PlantView(plant: plant,geo: geo)
+                                        .rotation3DEffect(Angle(degrees: Double(geo.frame(in: .global).minX) / -20), axis: (x: 0.0, y: 10.0, z: 0.0))
+                                }
+                            }.padding(.horizontal, ViewPadding.xmedium)
+                        }.shadow(radius: 10)
+                            .padding(.horizontal, -ViewPadding.xmedium)
                         VStack {
                             Text("Tips Of The Day")
                                 .font(WWFont.semiBold(fontFamily: .poppins, size: 18))
                                 .foregroundColor(WWColor.white)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.bottom, 10)
-                            Text("80% of success is showing up!")
+                            Text("Hydroponics create sustainable future")
                                 .padding(.horizontal, ViewPadding.large)
                                 .font(WWFont.regular(fontFamily: .leagueSpartan, size: 18))
                                 .foregroundColor(WWColor.white)
@@ -132,7 +103,7 @@ struct HomePageView: View {
                                 .multilineTextAlignment(.center)
                                 .lineSpacing(ViewPadding.small)
                                 .padding(.bottom, 10)
-                            Text("- Evan Susanto")
+                            Text("- WHO")
                                 .font(WWFont.regular(fontFamily: .leagueSpartan, size: 18))
                                 .frame(maxWidth: .infinity ,alignment: .trailing)
                                 .foregroundColor(WWColor.white)
@@ -146,7 +117,7 @@ struct HomePageView: View {
                         
                         VStack (alignment: .leading, spacing: ViewPadding.medium) {
                             HStack {
-                                Text("Plan Your Meeting")
+                                Text("Plan Your Planting Schedule")
                                     .font(WWFont.medium(fontFamily: .poppins, size: 20))
                                     .foregroundColor(WWColor.black)
                                 Spacer()

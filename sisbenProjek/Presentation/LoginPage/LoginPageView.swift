@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LoginPageView: View {
-    @State var text: String = "Evan"
     @State var emailText: String = ""
     @State var passwordText: String = ""
     var body: some View {
@@ -25,7 +24,7 @@ struct LoginPageView: View {
                                 .scaledToFit()
                                 .padding(.all, ViewPadding.medium)
                                 .frame(width: geo.size.height * 0.3)
-                            Text("Welcome To Listzzz!")
+                            Text("Welcome To Plant!")
                                 .foregroundColor(.black)
                                 .font(WWFont.medium(fontFamily: .poppins, size: 25))
                                 .frame(maxWidth: .infinity,alignment: .center)

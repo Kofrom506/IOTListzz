@@ -42,14 +42,9 @@ class ChartListViewModel: ObservableObject {
         }
     }
     func observerDataChangey(){
-        
         ref.child("test").child("yValue").observe(.value){
             snapshot in
             self.y = snapshot.value as? Int ?? 0
-            
-            
-            
-            
         }
     }
     func readValuez(){

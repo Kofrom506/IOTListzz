@@ -20,58 +20,58 @@ class AppDelegate: NSObject, UIApplicationDelegate{
 
 @main
 struct sisbenProjekApp: App {
-//    let persistenceController = PersistenceController.shared
+    //    let persistenceController = PersistenceController.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @State private var selectedTab: Tab = .homeViewPage
     
     var body: some Scene {
         WindowGroup {
-            LoginPageNewView()
+            LoginPageView()
         }
     }
 }
 struct mainView: View{
     @State private var selectedTab: Tab = .homeViewPage
     var body: some View{
-//        ZStack{
-//            switch(self.selectedTab.page){
-//            case 1:
-//                HomePageView()
-//            case 2:
-//                ScanPageView()
-//            case 3:
-//                StudentListView()
-//            case 4:
-//                ProfileView()
-//            default:
-//                StudentListView()
-//            }
-//
-//            VStack{
-//                Spacer()
-//                TabViewCustom(selectedTab: $selectedTab)
-//            }
-//        }.navigationBarBackButtonHidden(true)
-                ZStack{
-                    switch(self.selectedTab.page){
-                    case 1:
-                        HomePageNewView()
-                    case 2:
-                        WeatherAPIView()
-                    case 3:
-                        ChartListView()
-                    case 4:
-                        ProfilePageNewView()
-                    default:
-                       EmptyView()
-                    }
-        
-                    VStack{
-                        Spacer()
-                        TabViewCustom(selectedTab: $selectedTab)
-                    }
-                }.navigationBarBackButtonHidden(true)
-        
+        ZStack{
+            switch(self.selectedTab.page){
+            case 1:
+                HomePageView()
+            case 2:
+                WeatherAPIView()
+            case 3:
+                StudentListView()
+            case 4:
+                ProfileView()
+            default:
+                StudentListView()
+            }
+            
+            VStack{
+                Spacer()
+                TabViewCustom(selectedTab: $selectedTab)
+            }
+        }.navigationBarBackButtonHidden(true)
+        //                ZStack{
+        //                    switch(self.selectedTab.page){
+        //                    case 1:
+        //                        HomePageView()
+        //                    case 2:
+        //                        WeatherAPIView()
+        //                    case 3:
+        //                        ChartListView()
+        //                    case 4:
+        //                        ProfileView()
+        //                    default:
+        //                       EmptyView()
+        //                    }
+        //
+        //                    VStack{
+        //                        Spacer()
+        //                        TabViewCustom(selectedTab: $selectedTab)
+        //                    }
+        //                }.navigationBarBackButtonHidden(true)
+        //
     }
 }
 

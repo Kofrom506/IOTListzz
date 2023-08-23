@@ -14,7 +14,6 @@ struct ScanPageView: View {
 """
     
 """
-    
     var body: some View {
         GeometryReader{geo in
             VStack {

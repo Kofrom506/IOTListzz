@@ -7,19 +7,15 @@
 
 import SwiftUI
 import SwiftChart
-
 import Charts
 
 struct ChartListView: View {
     @StateObject private var viewModel = ChartListViewModel()
-    
-    
-    
     var body: some View {
         ZStack {
             WWColor.gradientPurple
                 .ignoresSafeArea()
-            GeometryReader{geo in
+            GeometryReader{ geo in
                 VStack{
                     ScrollView(showsIndicators: false) {
                         VStack (alignment: .leading, spacing: ViewPadding.mini) {
@@ -58,8 +54,6 @@ struct ChartListView: View {
                                             .frame(width: 100, height: 100)
                                         Spacer()
                                             .frame(height:10)
-                                        
-                                        
                                         Text("You're Safe, No Need To Panic Right Now")
                                             .padding(.horizontal, ViewPadding.large)
                                             .font(WWFont.regular(fontFamily: .leagueSpartan, size: 18))

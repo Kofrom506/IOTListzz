@@ -9,28 +9,28 @@ import SwiftUI
 
 enum Tab: String, CaseIterable{
     case homeViewPage
-    case scanViewPage
+    case encylopediaPage
     case studentListPage
     case profileViewPage
     
     var symbol: String {
         switch self {
         case .homeViewPage:       return "house"
-        case .scanViewPage:        return "cloud"
+        case .encylopediaPage:        return "leaf"
         case .studentListPage:      return "waveform.path.ecg"
         case .profileViewPage:   return "person.crop.circle"
             
         }
     }
     
-  
+    
     var page: Int {
         switch self {
         case .homeViewPage:       return 1
-        case .scanViewPage:        return 2
+        case .encylopediaPage:        return 2
         case .studentListPage:      return 3
         case .profileViewPage:   return 4
-
+            
         }
     }
 }
@@ -53,20 +53,19 @@ enum Tab: String, CaseIterable{
 //       }
 struct TabViewCustom: View {
     @Binding var selectedTab: Tab
-    
     @ViewBuilder
-       func getTabView(type: Tab) -> some View {
-           switch selectedTab {
-           case .homeViewPage:
-               HomePageNewView()
-           case .scanViewPage:
-                WeatherAPIView()
-           case .profileViewPage:
-               ProfilePageNewView()
-           case .studentListPage:
-               StudentListView()
-           }
-       }
+    func getTabView(type: Tab) -> some View {
+        switch selectedTab {
+        case .homeViewPage:
+            HomePageView()
+        case .encylopediaPage:
+            WeatherAPIView()
+        case .profileViewPage:
+            ProfileView()
+        case .studentListPage:
+            StudentListView()
+        }
+    }
     
     var body: some View {
         VStack{
