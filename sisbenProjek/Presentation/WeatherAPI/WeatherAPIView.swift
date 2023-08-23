@@ -55,12 +55,9 @@ struct WeatherAPIView: View {
                         
                         ForEach(Plant.plantList) { plant in
                             CardView(geo: geo, plant: plant)
-                                .onLongPressGesture(perform: {
+                                .onTapGesture {
                                     showingSheet.toggle()
-                                    
-                                    
-                                    
-                                })
+                                }
                                 .sheet(isPresented: $showingSheet) {
                                     PlantDetailView(plant: plant)
                                 }
