@@ -76,16 +76,39 @@ struct OnboardingView: View {
                 }
                 .edgesIgnoringSafeArea(.all)
                 
+                if(currentStep < OnboardingData.list.count - 1){
+                    PrimaryButton(title: "Continue" ){
+                        if self.currentStep < OnboardingData.list.count - 1 {
+                            self.currentStep += 1
+                        } else {
+                            screenRouter.navigateTo(.login)
+                        }
+                    }
+                    .padding(.vertical, ViewPadding.small)
+                    .padding(.horizontal, ViewPadding.xmedium)
+                }
                 
-                PrimaryButton(title: currentStep < OnboardingData.list.count - 1 ? "Continue" : "Get Started"){
-                    if self.currentStep < OnboardingData.list.count - 1 {
-                        self.currentStep += 1
-                    } else {
-                        screenRouter.navigateTo(.login)
+                else{
+                    VStack{
+                        Button("StringProtocol") {
+                            screenRouter.navigateTo(.login)
+                        }
+                        NavigationLink {
+                            RegisterPageView(emailAddress: "", fullName: "", role: .student, gender: .male, password: "")
+                        } label: {
+                            Button("StringProtocol") {
+                                print("evan")
+                            }
+                            Text("Don't have an Account? Register!")
+                                .underline()
+                                .foregroundColor(WWColor.grey)
+                                .font(WWFont.medium(fontFamily: .poppins, size: 12))
+                                .frame(maxWidth: .infinity,alignment: .center)
+                        }
                     }
                 }
-                .padding(.vertical, ViewPadding.small)
-                .padding(.horizontal, ViewPadding.xmedium)
+                    
+               
                 
                 Button {
                     self.currentStep = OnboardingData.list.count - 1

@@ -22,6 +22,25 @@ class WeatherAPIViewModel: ObservableObject{
     
 }
 
+
+
+import SwiftUI
+
+//struct ContentView: View {
+//    @ObservedObject var dataViewModel = DataViewModel()
+//
+//    var body: some View {
+//        List(dataViewModel.items, id: \.id) { item in
+//            Text(item.title)
+//        }
+//        .onAppear {
+//            dataViewModel.fetchData()
+//        }
+//    }
+//}
+
+
+
 //class WeatheAPIViewModel: ObservableObject{
 //    func fetch(){
 //        guard let url = URL(string: "http://api.weatherapi.com/v1/current.json?key=454cba2202f24b40a82235351213110&q=jakarta&aqi=no")else{

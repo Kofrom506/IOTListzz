@@ -82,6 +82,33 @@ class StudentListViewModel: ObservableObject {
 
         }
     }
+    @Published var dataTanam: [DataTanam] = []
+    
+    
+    func fetchData() {
+        guard let url = URL(string: "https://dashboard.greenhouse-project.my.id/api/dataTanam/1") else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error: \(error)")
+                return
+            }
+            
+            if let data = data {
+                do {
+                    let decoder = JSONDecoder()
+                    let decodedData = try decoder.decode([DataTanam].self, from: data)
+                    DispatchQueue.main.async {
+                        self.dataTanam = decodedData
+                    }
+                } catch {
+                    print("JSON decoding error: \(error)")
+                }
+            }
+        }.resume()
+    }
     func observerDataChangeA(){
 //        ref.child("Attendance").child("bool").observe(.value){
 //            snapshot in
@@ -95,3 +122,14 @@ class StudentListViewModel: ObservableObject {
 //    }
 
 }
+
+
+struct DataTanam: Identifiable, Decodable {
+    let id: Int
+    let tanggal_semai: String
+    let tanggal_tanam: String
+    let tanggal_panen: String
+    let jenis_tanaman: String?
+     let status: Int
+}
+

@@ -72,7 +72,7 @@ struct StudentListView: View {
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.top, ViewPadding.medium)
-                            .font(WWFont.semiBold(fontFamily: .leagueSpartan, size:15))                    }
+                        .font(WWFont.semiBold(fontFamily: .leagueSpartan, size:15))                    }
                 }.padding(.horizontal,ViewPadding.large)
                 HStack {
                     Text("EC Level:" )
@@ -110,7 +110,6 @@ struct StudentListView: View {
                 Form{
                     Section {
                         ForEach(viewModel.deviceList, id: \.id) { device in
-                            
                             if((device.name).contains(searchText)){
                                 VStack(alignment: .leading) {
                                     HStack{
@@ -119,19 +118,19 @@ struct StudentListView: View {
                                             .frame(maxWidth: 30, maxHeight: 30)
                                             .background(
                                                 WWColor.bluePastel
-
+                                                
                                             )
                                             .clipShape(Circle())
                                         VStack(alignment: .leading){
                                             Text(device.name)
                                                 .font(WWFont.medium(fontFamily: .poppins, size: 17))
-
+                                            
                                             Text(device.position)
                                                 .foregroundColor(WWColor.grey)
                                                 .font(WWFont.medium(fontFamily: .poppins, size: 12))
                                         }
                                     }
-
+                                    
                                 }
                             }
                             else if(searchText == ""){
@@ -142,19 +141,19 @@ struct StudentListView: View {
                                             .frame(maxWidth: 30, maxHeight: 30)
                                             .background(
                                                 WWColor.bluePastel
-
+                                                
                                             )
                                             .clipShape(Circle())
                                         VStack(alignment: .leading){
                                             Text(device.name)
                                                 .font(WWFont.medium(fontFamily: .poppins, size: 17))
-
+                                            
                                             Text(device.position)
                                                 .foregroundColor(WWColor.grey)
                                                 .font(WWFont.medium(fontFamily: .poppins, size: 12))
                                         }
                                     }
-
+                                    
                                 }
                             }
                             
@@ -162,23 +161,61 @@ struct StudentListView: View {
                         
                     }
                 }
-                    
                 
+                
+                Form{
+                    Section {
+                        ForEach(viewModel.dataTanam, id: \.id) { tanam in
+                            VStack(alignment: .leading) {
+                                HStack{
+                                    Image(systemName: "person")
+                                        .scaledToFit()
+                                        .frame(maxWidth: 30, maxHeight: 30)
+                                        .background(
+                                            WWColor.bluePastel
+                                            
+                                        )
+                                        .clipShape(Circle())
+                                    VStack(alignment: .leading){
+                                        Text(tanam.tanggal_semai)
+                                            .font(WWFont.medium(fontFamily: .poppins, size: 17))
+                                        
+                                        Text(tanam.tanggal_tanam)
+                                            .foregroundColor(WWColor.grey)
+                                            .font(WWFont.medium(fontFamily: .poppins, size: 12))
+                                        Text(tanam.tanggal_panen)
+                                            .foregroundColor(WWColor.grey)
+                                            .font(WWFont.medium(fontFamily: .poppins, size: 12))
+                                    }
+                                }
+                                
+                            }
+                        }
+                        
+                        
+                    }
+                    
+                }
             }
             
-        }.onAppear{
+            
+            
+            
+        }
+        .onAppear{
             onAppear()
+            
             
         }
         
     }
     func delete(at offsets: IndexSet){
         print("")
-//        viewModel.deviceList.remove(atOffsets: offsets)
+        //        viewModel.deviceList.remove(atOffsets: offsets)
     }
-    
-    
 }
+    
+
 
 
 extension StudentListView {
@@ -193,6 +230,7 @@ extension StudentListView {
             viewModel.observerDataChanget()
             viewModel.observerDataChangeh()
             viewModel.observerDataChangeb()
+            viewModel.fetchData()
 //            if(true){
                
 //            }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginPageView: View {
+    @EnvironmentObject var screenRouter: ScreenRouter
     @State var emailText: String = ""
     @State var passwordText: String = ""
     var body: some View {
